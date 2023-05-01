@@ -49,7 +49,7 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1yUMJZeKXjtW0165nB3zfC4DxozNsM4XX/view?usp=sharing"
                   download="AkiodeTimothy_Resume.pdf"
                 >
-                  Download Resume
+                 Resume
                 </a>
               </li>
             </ul>
