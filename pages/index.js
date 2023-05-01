@@ -63,7 +63,7 @@ export default function Home() {
               {`Looking to elevate your tech game? Meet Akiode Timothy - the software engineer who's got all your bases covered! Whether you need a frontend developer to make your website sing, a backend developer to streamline your operations, or a mobile development whiz to create a killer app, Akiode's your guy. With skills in all areas, he's the ultimate triple threat for all your tech needs.`}
             </h3>
           </div>
-          <div className="flex justify-center gap-16 py-3 md:py-6 text-black dark:text-white">
+          <div className="flex justify-center gap-5 md:gap-8 lg:gap-12 py-3 md:py-6 text-black dark:text-white">
             <a
               href="https://twitter.com/akiode_timothy"
               target="_blank"
