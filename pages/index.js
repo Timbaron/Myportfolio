@@ -4,19 +4,21 @@ import {
   AiFillTwitterCircle,
   AiFillLinkedin,
   AiFillInstagram,
+  AiFillGithub,
+  AiFillWechat,
 } from "react-icons/ai";
 import Image from "next/image";
-import deved from "../public/dev-ed-wave.png";
+import timothy from "../public/timothy.png";
 import design from "../public/design.png";
 import code from "../public/code.png";
 import consulting from "../public/consulting.png";
-import web1 from "../public/web1.png";
-import web2 from "../public/web2.png";
-import web3 from "../public/web3.png";
-import web4 from "../public/web4.png";
-import web5 from "../public/web5.png";
-import web6 from "../public/web6.png";
+import Services from "../components/services";
+import Portfolio from "../components/Portfolio";
+import Footer from "../components/footer";
+import { projects } from "../constants/projects";
 import { useState } from "react";
+import { services } from "../constants/services";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -31,7 +33,9 @@ export default function Home() {
       <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900">
         <section className="min-h-screen">
           <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl font-burtons dark:text-white">Timothy</h1>
+            <h1 className="text-2xl font-burtons lg:text-4xl dark:text-white">
+              Timothy
+            </h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -42,9 +46,10 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8"
-                  href="#"
+                  href="https://drive.google.com/file/d/1yUMJZeKXjtW0165nB3zfC4DxozNsM4XX/view?usp=sharing"
+                  download="AkiodeTimothy_Resume.pdf"
                 >
-                  Resume
+                  Download Resume
                 </a>
               </li>
             </ul>
@@ -54,13 +59,9 @@ export default function Home() {
             <h2 className="text-5xl py-2 text-teal-500 font-medium md:text-6xl">
               Akiode Timothy
             </h2>
-            <h3 className="text-2xl py-2 md:text-3xl dark:text-white">
-              FullStack Developer
+            <h3 className="text-1xl py-2 md:text-2xl dark:text-white">
+              {`Looking to elevate your tech game? Meet Akiode Timothy - the software engineer who's got all your bases covered! Whether you need a frontend developer to make your website sing, a backend developer to streamline your operations, or a mobile development whiz to create a killer app, Akiode's your guy. With skills in all areas, he's the ultimate triple threat for all your tech needs.`}
             </h3>
-            <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-lg mx-auto dark:text-white">
-              Freelancer providing service for programming and design content
-              needs. Join me down below and let us gracking
-            </p>
           </div>
           <div className="text-5xl flex justify-center gap-16 py-3 text-gray-500 dark:text-white">
             <a
@@ -78,183 +79,79 @@ export default function Home() {
               <AiFillLinkedin />
             </a>
             <a
-              href="https://www.instagram.com/techbrobishop/"
+              href="http://github.com/timbaron"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillInstagram />
+              <AiFillGithub />
+            </a>
+            <a
+              href="https://wa.me/2348149792957?text=Hello%20Timothy%2C%20my%20name%20is%20_______.%20I%20got%20your%20contact%20from%20your%20portfolio."
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp className="h-13 w-10" />
             </a>
           </div>
           <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
-            <Image src={deved} alt="Timothy" layout="fill" objectFit="cover" />
+            <Image
+              src={timothy}
+              alt="Timothy"
+              layout="fill"
+              objectFit="cover"
+            />
           </div>
         </section>
 
         <section className="dark:text-white">
           <div className=" text-center">
             <h3 className="text-3xl py-1 text-center">Services I offer</h3>
+            {/* <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
+              Since the beginning of my journey as a software engineer and full stack
+              developer, I have workded with several companies and built 
+            </p> */}
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-              Since the beginning of my journey as a freelance designer and
-              developer, I have done remote work for several companies. I have
-              had the <span className="text-teal-500">pleasure</span> of working
-              with clients from all over the world.
-            </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
+              I offer from a wide range of services, including mobile and web
+              frontend and backend development.
             </p>
           </div>
-          <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:text-black">
-              <Image src={design} width={100} height={100} alt="Design" />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant design suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools I used</h4>
-              <p className="text-grey-800 py-1">Photoshop</p>
-              <p className="text-grey-800 py-1">Illustrator</p>
-              <p className="text-grey-800 py-1">Figma </p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:text-black">
-              <Image src={code} width={100} height={100} alt="Design" />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant design suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools I used</h4>
-              <p className="text-grey-800 py-1">Photoshop</p>
-              <p className="text-grey-800 py-1">Illustrator</p>
-              <p className="text-grey-800 py-1">Figma </p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:text-black">
-              <Image src={consulting} width={100} height={100} alt="Design" />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant design suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools I used</h4>
-              <p className="text-grey-800 py-1">Photoshop</p>
-              <p className="text-grey-800 py-1">Illustrator</p>
-              <p className="text-grey-800 py-1">Figma </p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:text-black">
-              <Image src={consulting} width={100} height={100} alt="Design" />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant design suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools I used</h4>
-              <p className="text-grey-800 py-1">Photoshop</p>
-              <p className="text-grey-800 py-1">Illustrator</p>
-              <p className="text-grey-800 py-1">Figma </p>
-            </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white dark:text-black">
-              <Image src={consulting} width={100} height={100} alt="Design" />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
-              <p className="py-2">
-                Creating elegant design suited for your needs following core
-                design theory.
-              </p>
-              <h4 className="py-4 text-teal-600">Design tools I used</h4>
-              <p className="text-grey-800 py-1">Photoshop</p>
-              <p className="text-grey-800 py-1">Illustrator</p>
-              <p className="text-grey-800 py-1">Figma </p>
-            </div>
+          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 pb-8">
+            {services.map((service) => (
+              <Services
+                key={service.id}
+                title={service.title}
+                description={service.description}
+              />
+            ))}
           </div>
         </section>
 
         <section className="dark:text-white">
           <div>
-            <h3 className="text-3xl py-1">Portfolio</h3>
+            <h3 className="text-4xl py-1">Portfolio</h3>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
               Since the beginning of my journey as a freelance designer and
               developer, I have done remote work for several companies. I have
               had the <span className="text-teal-500">pleasure</span> of working
               with clients from all over the world.
             </p>
-            <p className="text-md py-2 leading-8 text-gray-800 dark:text-white">
-              I offer from a wide range of services, including brand design,
-              programming and teaching.
-            </p>
           </div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web1}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Web1"
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-8"></div>
+
+          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 pb-8">
+            {projects.map((project) => (
+              <Portfolio
+                key={project.id}
+                src={project.imgUrl}
+                title={project.title}
+                description={project.description}
+                urlText={project.urlText}
+                url={project.url}
               />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web2}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Web1"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web3}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Web1"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web4}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Web1"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web5}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Web1"
-              />
-            </div>
-            <div className="basis-1/3 flex-1">
-              <Image
-                src={web6}
-                className="rounded-lg object-cover"
-                width={"100%"}
-                height={"100%"}
-                layout="responsive"
-                alt="Web1"
-              />
-            </div>
+            ))}
           </div>
         </section>
+        <Footer />
       </main>
     </div>
   );
