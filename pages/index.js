@@ -49,51 +49,52 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1yUMJZeKXjtW0165nB3zfC4DxozNsM4XX/view?usp=sharing"
                   download="AkiodeTimothy_Resume.pdf"
                 >
-                  Download Resume
+                  Resume
                 </a>
               </li>
             </ul>
           </nav>
 
-          <div className="text-center p-10">
-            <h2 className="text-5xl py-2 text-teal-500 font-medium md:text-6xl">
+          <div className="text-center px-4 py-10 md:px-10">
+            <h2 className="text-3xl md:text-6xl py-2 text-teal-500 font-medium">
               Akiode Timothy
             </h2>
-            <h3 className="text-1xl py-2 md:text-2xl dark:text-white">
+            <h3 className="text-base md:text-2xl py-2 dark:text-white">
               {`Looking to elevate your tech game? Meet Akiode Timothy - the software engineer who's got all your bases covered! Whether you need a frontend developer to make your website sing, a backend developer to streamline your operations, or a mobile development whiz to create a killer app, Akiode's your guy. With skills in all areas, he's the ultimate triple threat for all your tech needs.`}
             </h3>
           </div>
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-500 dark:text-white">
+          <div className="flex justify-center gap-16 py-3 md:py-6 text-black dark:text-white">
             <a
               href="https://twitter.com/akiode_timothy"
               target="_blank"
               rel="noopener noreferrer"
+              className="w-12 md:w-16"
             >
-              <AiFillTwitterCircle />
+              <AiFillTwitterCircle className="h-12 w-10 md:h-14 md:w-12" />
             </a>
             <a
               href="https://www.linkedin.com/in/timothy-akiode-7b772a164/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillLinkedin />
+              <AiFillLinkedin className="h-10 w-8 md:h-14 md:w-12 " />
             </a>
             <a
               href="http://github.com/timbaron"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <AiFillGithub />
+              <AiFillGithub className="h-12 w-10 md:h-14 md:w-12" />
             </a>
             <a
               href="https://wa.me/2348149792957?text=Hello%20Timothy%2C%20my%20name%20is%20_______.%20I%20got%20your%20contact%20from%20your%20portfolio."
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaWhatsapp className="h-13 w-10" />
+              <FaWhatsapp className="h-12 w-10 md:h-14 md:w-12" />
             </a>
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden md:h-96 md:w-96">
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-60 h-60 md:w-96 md:h-96 mt-10 md:mt-20 overflow-hidden">
             <Image
               src={timothy}
               alt="Timothy"
