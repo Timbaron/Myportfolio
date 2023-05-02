@@ -18,6 +18,9 @@ export const projects = [
     url: "https://jollof.com",
     urlText: "Visit Project",
     imgUrl: jollof,
+    stacks: [
+      'HTML','CSS','JavaScript','BootStrap','PHP','LARAVEL','JQUERY'
+    ],
   },
   {
     id: 2,
@@ -26,6 +29,9 @@ export const projects = [
     url: "https://expo.dev/@timbaron/react_native_app?serviceType=classic&distribution=expo-go",
     urlText: "Try Mobile app out",
     imgUrl: nft,
+    stacks: [
+      'ReactJS','TailwindCSS','React Native'
+    ],
   },
   {
     id: 3,
@@ -34,6 +40,9 @@ export const projects = [
     url: "https://dark-truth-0965.on.fleek.co/",
     urlText: "Visit Showcase Website",
     imgUrl: nft2,
+    stacks: [
+      'ReactJS','NextJs','TailwindCSS'
+    ],
   },
   {
     id: 4,
@@ -42,6 +51,9 @@ export const projects = [
     url: "https://github.com/Timbaron/dJobs",
     urlText: "Open app on GitHub",
     imgUrl: djobs,
+    stacks: [
+      'ReactJS','TailwindCSS','React Native'
+    ],
   },
   {
     id: 5,
@@ -50,6 +62,9 @@ export const projects = [
     url: "https://github.com/Timbaron/fundz",
     urlText: "Open Project on GitHub",
     imgUrl: fundz,
+    stacks: [
+      'HTML','CSS','JavaScript','PHP','LARAVEL'
+    ],
   },
   {
     id: 6,
@@ -58,6 +73,9 @@ export const projects = [
     url: "https://github.com/Timbaron/tailer-ui",
     urlText: "Open project on Github",
     imgUrl: tailerui,
+    stacks: [
+      'ReactJS','NextJs','TailwindCSS'
+    ],
   },
   {
     id: 7,
@@ -66,5 +84,8 @@ export const projects = [
     url: "https://github.com/Timbaron/ThreeJs",
     urlText: "View source code on GitHub",
     imgUrl: threejs,
+    stacks: [
+      'ReactJS','NextJs','TailwindCSS, ThreeJs'
+    ],
   },
 ];

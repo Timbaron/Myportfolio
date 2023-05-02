@@ -19,9 +19,11 @@ import { projects } from "../constants/projects";
 import { useState } from "react";
 import { services } from "../constants/services";
 import { FaWhatsapp } from "react-icons/fa";
+import Modal from "../components/modal";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -49,7 +51,7 @@ export default function Home() {
                   href="https://drive.google.com/file/d/1yUMJZeKXjtW0165nB3zfC4DxozNsM4XX/view?usp=sharing"
                   download="AkiodeTimothy_Resume.pdf"
                 >
-                 Resume
+                  Resume
                 </a>
               </li>
             </ul>
@@ -141,17 +143,18 @@ export default function Home() {
 
           <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 pb-8">
             {projects.map((project) => (
-              <Portfolio
-                key={project.id}
-                src={project.imgUrl}
-                title={project.title}
-                description={project.description}
-                urlText={project.urlText}
-                url={project.url}
-              />
+              <>
+                <Portfolio
+                  key={project.id}
+                  project={project}
+                  isDrawerOpen={isOpen}
+                  setIsDrawerOpen={setIsOpen}
+                />                
+              </>
             ))}
           </div>
         </section>
+        
         <Footer />
       </main>
     </div>
